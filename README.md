@@ -6,7 +6,12 @@ This demonstrates an AI-assisted operational control loop for Kubernetes, Terraf
 
 ```bash
 python3 -m unittest discover -s tests -v
+python3 -m src.app < examples/remediation-signals.jsonl
 ```
+
+The first sample is a bounded, approved remediation. The second proves that an
+exhausted error budget takes precedence over automation confidence. JSONL keeps
+the result easy to wire into a workflow runner and incident timeline.
 
 ## Candidate links
 - https://www.linkedin.com/in/rahul-h-bhatia/
